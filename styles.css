@@ -1,26 +1,29 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0; /* Cor de Fundo */
-  
+    margin: 0; /* Remove as margens padrão */
+    padding: 0; /* Remove os preenchimentos padrão */
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-top: 50px;
-    margin-left: 800px;
-    margin-right: 800px;
-    
+    padding: 20px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    max-width: 800px; /* Limita a largura máxima da página */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
 .profile-pic {
-
     border-radius: 50%;
     width: 180px; /* Tamanho da Foto */
     height: 180px; /* Tamanho da Foto */
     margin-bottom: 20px;
-
 }
-h1{
+
+h1 {
     background: linear-gradient(to right, #FA7C07, #CF1256); /* Substitua as cores pelo gradiente desejado */
     -webkit-background-clip: text; /* Aplica o gradiente ao texto */
     background-clip: text; /* Aplica o gradiente ao texto */
@@ -29,30 +32,16 @@ h1{
     font-size: 50px;
 }
 
-  
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-.switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
 /* Estilos para os Botões */
 .button {
     display: block;
-    
     padding: 10px 20px;
     margin: 10px;
     text-decoration: none;
     color: #fff;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-
+    width: fit-content; /* Ajusta a largura ao conteúdo */
 }
 
 .button:hover {
@@ -66,13 +55,27 @@ h1{
 .github {
     background-color: #333; /* Cor do GitHub */
 }
-.email{
+
+.email {
     background-color: #848080;
 }
 
 /* Estilos para os Ícones */
 i {
     margin-right: 5px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .slider {
@@ -114,6 +117,7 @@ input:checked + .slider:before {
     -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
+
 /* Estilos para o tema claro */
 body.light-theme {
     background-color: #f0f0f0; /* Cor de fundo do tema claro */
